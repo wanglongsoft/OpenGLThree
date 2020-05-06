@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Camera2Activity">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guideline_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <Button
+        android:id="@+id/take_picture"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="拍照"
+        app:layout_constraintBottom_toTopOf="@+id/swicth_camera"
+        app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_20"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/black_white_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="黑白"
+        app:layout_constraintBottom_toTopOf="@+id/swicth_camera"
+        app:layout_constraintEnd_toEndOf="@id/vertical_guideline_40"
+        app:layout_constraintStart_toStartOf="@id/vertical_guideline_20" />
+
+    <Button
+        android:id="@+id/warm_color_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="暖色"
+        app:layout_constraintBottom_toTopOf="@+id/swicth_camera"
+        app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_60"
+        app:layout_constraintStart_toEndOf="@+id/vertical_guideline_40" />
+
+    <Button
+        android:id="@+id/cool_color_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="冷色"
+        app:layout_constraintBottom_toTopOf="@+id/swicth_camera"
+        app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_80"
+        app:layout_constraintStart_toEndOf="@+id/vertical_guideline_60" />
+
+    <Button
+        android:id="@+id/normal_color_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="正常"
+        app:layout_constraintBottom_toTopOf="@+id/swicth_camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vertical_guideline_80" />
+
+    <Button
+        android:id="@+id/swicth_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="切换摄像头"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_40"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/split_screen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="分屏预览"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_80"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_40" />
+
+    <Button
+        android:id="@+id/start_preview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="预览"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_80" />
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
